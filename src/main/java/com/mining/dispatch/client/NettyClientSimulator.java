@@ -24,7 +24,7 @@ public class NettyClientSimulator {
         System.out.println("从 Netty Server 模拟接收无人矿卡数据...");
         // 模拟8台无人矿卡的数据
         List<VehicleData> dataList = new ArrayList<>();
-        for (int i = 1; i <= 8; i++) {
+        for (int i = 1; i <= 2; i++) {
             VehicleData data = new VehicleData();
             data.setVehicleId("Autonomous-" + i);
             data.setLatitude(22.0 + random.nextDouble());
