@@ -27,7 +27,7 @@ public class DataIngestionService {
      * 定时采集无人矿卡数据并发布
      * 假设每5秒执行一次，你需要根据实际需求调整 cron 表达式
      */
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRateString = "${autonomous.truck.ingestion.fixed-rate}")
     public void ingestAutonomousTruckData() {
         // 在实际生产环境中，请使用专业的日志框架，例如 SLF4J
         System.out.println("--- 正在拉取无人矿卡数据...");
@@ -52,7 +52,7 @@ public class DataIngestionService {
      * 定时采集工程设备数据并发布
      * 假设每10秒执行一次
      */
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRateString = "${manned.vehicle.ingestion.fixed-rate}")
     public void ingestMannedVehicleData() {
         // 在实际生产环境中，请使用专业的日志框架，例如 SLF4J
         System.out.println("--- 正在拉取工程设备数据...");
